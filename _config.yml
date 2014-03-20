@@ -1,0 +1,5 @@
+permalink: pretty
+markdown: redcarpet
+highlighter: rouge
+redcarpet:
+  extensions: ["tables"]
