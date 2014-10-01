@@ -1,5 +1,34 @@
+#
+# Blog Settings
+#
+author: Ronald Verhaegen
+description: The ideas of a mad man. 
+title: Ronald Verhaegen
+subtitle: The ideas of a mad man
+
+subscribe_rss: /atom.xml
+
+# Github repositories
+github_user: ronaldv
+github_repo_url: https://github.com/RonaldV/ronaldv.github.io
+
+# Twitter
+twitter_user: ronaldverhaegen
+twitter_tweet_button: true
+
+# Disqus Comments
+disqus_short_name: ronaldv
+disqus_show_comment_count: true
+
+#
+# Jekyll Settings
+#
 permalink: pretty
-markdown: redcarpet
-highlighter: rouge
+#markdown: redcarpet
+#highlighter: rouge
 redcarpet:
   extensions: ["tables"]
+paginate: 6
+
+sass:
+  style: :compressed
