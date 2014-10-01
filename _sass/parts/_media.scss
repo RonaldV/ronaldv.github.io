@@ -1,0 +1,48 @@
+@media (max-width: $max-width-collapse) {
+  header[role="banner"] {
+    border-bottom: 1px solid $color-border;
+    border-right: 0;
+    position: relative;
+    width: 100%;
+    >div {
+      margin: 0;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      right: 0;
+    }
+    h1 {
+      @include font-size($larger-size);
+      padding: $smaller-size 0 0 0;
+      margin-bottom: 0;
+    }
+    h2 {
+      display: none;
+    }
+    nav {
+      /*ul {
+        margin-top: 10px;
+      }*/
+      li {
+        display: inline;
+        margin: 0 $smallest-size;
+      }
+
+    }
+  }
+
+  main[role="main"], body > footer {
+    margin: $normal-size $larger-size;
+  }
+    
+  .social {
+    margin: 0;
+    padding: 0 0 16px 0;
+    li {
+      padding: 0 2px;
+      vertical-align: top;
+    }
+
+  }
+
+}

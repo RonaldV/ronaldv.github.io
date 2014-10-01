@@ -1,0 +1,97 @@
+// TODO check out de best reset/normalize/boilerplate
+
+$header-width: 312px; //236 //383
+$padding-from-header: 340px;
+$max-width-collapse: 728px;
+$max-width-main: 624px;
+
+$ratio: 1.618;
+$smallest-size: 4px;
+$smaller-size: 6px;
+$sub-normal-size: 13px;
+$normal-size: 16px;
+$medium-size: 20px; // Sub headlines
+$larger-size: 26px; // Headlines
+$largest-size: 42px; // Title
+// default font size in most browsers is 16px
+$font-size: $normal-size;
+$line-height: strip-units($font-size * $ratio);
+
+
+html { 
+  //font-size: 62.5%;
+  font-size: 100%;
+  line-height: $ratio;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4,h5,h6,
+ul,ol,dl,
+fieldset,
+p,
+table,
+pre,
+hr{
+  margin-bottom: #{$line-height}px;
+  margin-bottom: #{$ratio}rem;
+}
+
+body {
+  color: $color-font;
+  background: $color-background;
+  font-family: $font;
+}
+
+h1 {
+  color: $color-font-heading;
+  @include font-size($largest-size);
+  font-weight: bold;
+}
+
+h2 {
+  color: $color-font-heading;
+  @include font-size($larger-size);
+  font-weight: bold;
+}
+
+h3 {
+  color: #333333;
+  @include font-size($medium-size);
+}
+
+h4 {
+  color: #19272d;
+  @include font-size($medium-size);
+}
+
+h1, h2, h3, h4 {
+  @include heading-link();
+  text-rendering: optimizeLegibility;
+  font-family: $font-heading;
+}
+
+a {
+  &:link, &:visited {
+    border-bottom: 1px dotted $color-link-hover;
+    color: $color-link;
+    padding: 2px;
+    outline: none;
+    text-decoration: none;
+    @include transition-property();
+    @include transition-duration(.25s);
+  }
+  &:hover, &:active {
+    background-color: $color-link-hover;
+    color: #FFFFFF;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+hr {
+  height: 1px;
+  color: $color-border;
+  background: $color-border;
+  font-size: 0;
+  border: none;
+}

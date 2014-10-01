@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<div>
+<article role="article" itemscope itemtype="http://schema.org/BlogPosting">
+  {% include article.html %}
+  <footer>
+    {% unless page.sharing == false %}
+      {% include post/sharing.html %}
+    {% endunless %}
+    <p class="meta">
+      {% if page.previous.url %}
+        <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}" class="prev">← {{page.previous.title}}</a>
+      {% endif %}
+      {% if page.next.url %}
+        <a href="{{page.next.url}}" title="Next Post: {{page.next.title}}" class="next">{{page.next.title}} →</a>
+      {% endif %}
+    </p>
+  </footer>
+</article>
+{% if site.disqus_short_name and page.comments == true %}
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
+  </section>
+{% endif %}
+</div>

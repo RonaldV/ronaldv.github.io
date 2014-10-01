@@ -1,0 +1,142 @@
+header[role="banner"] {
+  background: $color-header-background;
+  //background: $color-header-background url("../images/light_noise_diagonal.png") repeat right top;
+  border-right: 1px solid $color-border;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: $header-width;
+  //text-shadow: 0 1px 1px rgba(0,0,0,.5);
+  text-shadow: 0 1px 0 #fff;
+  >div {
+    position: absolute;
+    text-align: right;
+    top: 26px;
+    width: 90%;
+    right: 26px;
+  }
+  h1 {
+    color: $color-header-font;
+    //line-height: 56px;
+    text-transform: uppercase;
+    a {
+      color: $color-header-font;
+    }
+  }
+  h2 {
+    color: $color-header-font;
+    font-size: 23px;
+    line-height: 36px;
+    text-transform: lowercase;
+  }
+  @include heading-link($color-header-font);
+  nav {
+    li {
+      list-style: none;
+      margin-bottom: $smallest-size;
+    }
+    a {
+      color: $color-header-font;
+      text-transform: lowercase;
+      @include font-size($medium-size);
+      line-height: 28px;
+    }
+  }
+  .social {
+    a {
+      &.twitter {
+        padding: 5px 5px;
+        background-color: $color-header-font;
+        //background-color: $color-twitter;
+        //border: 1px solid #55CFF8;
+        color: $color-header-background;
+        &:before {
+          content: "\f099";
+          font-family: 'FontAwesome';
+          font-size: 140%;
+        }
+        &:hover {
+          background-color: $color-twitter;
+        }
+      }
+      &.github {
+        top: 5px;
+        position: relative;
+        width: 36px;
+        height: 36px;
+        padding: 0 0;
+        color: $color-header-font;
+        //background-color: #afb6ca;
+        //border: 1px solid #afb6ca;
+        &:before {
+          content: "\f09b";
+          font-family: 'FontAwesome';
+          font-size: 210%;
+        }
+        &:hover {
+          color: $color-github;
+        }
+      }
+      &.rss {
+        padding: 5px 5px;
+        background-color: $color-header-font;
+        color: $color-header-background;
+        //border: 1px solid #EF7522;
+        &:before {
+          content: "\f09e";
+          font-family: 'FontAwesome';
+          font-size: 130%;
+        }
+        &:hover {
+          background-color: $color-rss;
+        }
+      }
+    }
+  }
+  /*
+  a {
+  color: $color-gray01;
+  @include transition(color 0.3s);
+  &:hover {
+  color: $color-main;
+  }
+
+  }
+  */
+}
+.social {
+  text-shadow: none;
+  margin: $largest-size 0 0 0;
+  /*ul {
+    text-align: center;
+  }*/
+  li {
+    display: inline-block;
+    padding: 0 0 0 $normal-size;
+  }
+  a {
+    text-align: center;
+    @include border-radius(50%);
+    display: -moz-inline-stack;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    zoom: 1;
+    *display: inline;
+    //text-indent: -9999px;
+    //margin: 0 0 0 10px;
+    //opacity: 0.5;
+    width: $larger-size;
+    height: $larger-size;
+    line-height: 28px;
+    @include transition(0.3s);
+    span {
+      display: inline-block;
+      text-indent: -9999px;
+    }
+    /*&:hover {
+      opacity: 1
+    }*/
+  }
+}

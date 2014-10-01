@@ -1,0 +1,26 @@
+---
+layout: default
+title: Home
+---
+
+{% assign index = true %}
+<div class="posts" itemscope itemtype="http://schema.org/Blog">
+  {% for post in paginator.posts %}
+  <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    {% include article.html %}
+  </article>
+  {% endfor %}
+</div>
+
+<nav class="pagination">
+  {% if paginator.next_page %}
+  <a class="past" href="/page{{paginator.next_page}}">Past</a>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+    <a class="future" href="/">Future</a>
+    {% else %}
+    <a class="future" href="/page{{paginator.previous_page}}">Future</a>
+    {% endif %}
+  {% endif %}
+</nav>

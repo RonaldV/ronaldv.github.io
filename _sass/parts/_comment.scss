@@ -1,0 +1,9 @@
+#comment {
+  padding: $larger-size 0;
+  @include border-shadow();
+  h1.title {
+    @include font-size($larger-size);
+    font-weight: 300;
+    margin-bottom: $medium-size;
+  }
+}

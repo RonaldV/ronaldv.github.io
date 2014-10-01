@@ -1,0 +1,54 @@
+@function strip-units($number) {
+  @return $number / ($number * 0 + 1);
+}
+@function calculateRem($size) {
+  // default font size in most browsers is 16px
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin border-shadow($top: $color-border-top, $bottom: $color-border-bottom) {
+  border-top: 1px solid $top;
+  border-bottom: 1px solid $bottom;
+}
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin transition($time) {
+  -webkit-transition: $time;
+  -moz-transition: $time;
+  -o-transition: $time;
+  transition: $time;
+}
+@mixin transition-property() {
+  -webkit-transition-property: background-color, color, border-color;
+  -moz-transition-property: background-color, color, border-color;
+  -o-transition-property: background-color, color, border-color;
+  transition-property: background-color, color, border-color;
+}
+@mixin transition-duration($time) {
+  -webkit-transition-duration: $time;
+  -moz-transition-duration: $time;
+  -o-transition-duration: $time;
+  transition-duration: $time;
+}
+@mixin heading-link($font-color: $color-font-heading) {
+  a {
+    &:link, &:visited {
+      color: $font-color;
+      padding: 0;
+      border: 0;
+    }
+    &:hover {
+      background-color: transparent;
+      color: $color-link;
+    }
+  }
+}
+@mixin font-size($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}

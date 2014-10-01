@@ -1,0 +1,113 @@
+// article[role="article"] {
+article {
+  h1 {
+    color: $color-link;
+    //font-size: 36px;
+    //margin-bottom: 0;
+    //padding-top: 15px;
+  }
+  h2 {
+    //font-size: 30px;
+    //font-weight: bold;
+    //margin-bottom: 0;
+    a, a:visited {
+      color: $color-link;
+      text-decoration: none;
+      //line-height: 36px;
+    }
+    a {
+      &:hover, &:active {
+        color: #444444;
+      }
+    }
+  }
+  /*p,
+  footer {
+    font-size: 18px;
+    text-rendering: optimizeLegibility;
+  }*/
+  blockquote {
+    background: $color-header-background;
+    border-left: $smaller-size solid $color-link;
+    padding: $normal-size $normal-size;
+    margin: $larger-size 0;
+    & > p:first-of-type {
+      margin-top: 0;
+    }
+    & > p:last-of-type {
+      margin-bottom: $smaller-size;
+    }
+  }
+  ol,
+  ul {
+    padding: 0 0 0 1.6rem;
+  }
+  ul {
+    list-style-type: disc;
+  }
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    margin-bottom: 0.6rem;
+  }
+  .meta {
+    overflow: hidden;
+    .prev {
+      float: left;
+    }
+    .next {
+      float: right;
+    }
+  }
+  .label {
+    display: inline;
+    padding: .2em .6em;
+    margin-left: .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    background-color: $color-green;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+  }
+  footer {
+    .meta {
+      margin-top: $larger-size;
+    }
+  }
+}
+.twitter-share-button {
+  &:before {
+    content: "\f099";
+    font-family: 'FontAwesome';
+    font-size: 140%;
+    color: $color-twitter;
+  }
+}
+/*
+a.button {
+  display: inline-block;
+  height: 22px;
+  margin: 0 auto;
+  padding: 6px 20px 7px;
+  font-size: 15px;
+  line-height: 20px;
+  color: $color-link-hover;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  &:hover, &:active {
+    background-color: transparent;
+    color: $color-link;
+    border: 1px solid $color-link;
+  }
+}
+*/
+#disqus_thread {
+  margin-bottom: $larger-size;
+  margin-top: $largest-size;
+}

@@ -1,0 +1,40 @@
+<div>
+    <h1><a href="/">{{ site.title }}</a></h1>
+    {% if site.subtitle %}
+      <h2>{{ site.subtitle }}</h2>
+    {% endif %}
+    <nav role="navigation">
+      <ul>
+        {% assign pages_list = site.pages %}
+        {% for node in pages_list %}
+          {% if node.title != null %}
+            {% if node.layout == "page" %}
+              <li {% if page.url == node.url %} class="active" {% endif %}>
+                <a href="{{ node.url }}">{{ node.navtitle }}</a>
+              </li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+
+    {% comment %}
+      TODO social nav
+    {% endcomment %}
+    <nav class="social" role="navigation">
+      <ul>
+        {% if site.email %}
+    			<li><a class="email" href="mailto:{{ site.email }}" title="Email">Email</a></li>
+    		{% endif %}
+    		{% if site.twitter_user %}
+    			<li><a class="twitter" href="http://twitter.com/{{ site.twitter_user }}" title="Twitter"><span>Twitter</span></a></li>
+    		{% endif %}
+    		{% if site.github_user %}
+    			<li><a class="github" href="https://github.com/{{ site.github_user }}" title="GitHub"><span>Github</span></a></li>
+    		{% endif %}
+    		{% if site.subscribe_rss %}
+    			<li><a class="rss" href="{{ site.subscribe_rss }}" title="RSS"><span>RSS</span></a></li>
+    		{% endif %}
+      </ul>
+    </nav>
+</div>

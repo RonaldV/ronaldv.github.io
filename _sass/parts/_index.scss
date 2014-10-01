@@ -1,0 +1,30 @@
+main {
+  display: block;
+}
+main[role="main"] {
+  margin: $larger-size $larger-size 0 $padding-from-header;
+  max-width: $max-width-main;
+
+  /*h2 {
+    padding-top: 14px;
+  }*/
+}
+.posts article {
+  margin-top: 32px;
+  margin-bottom: 68px;
+  h1 {
+    @include font-size($larger-size);
+    font-weight: bold;
+    margin-bottom: 0;
+    a, a:visited {
+      color: $color-link;
+      text-decoration: none;
+      //line-height: 36px;
+    }
+    a {
+      &:hover, &:active {
+        color: $color-link-hover;
+      }
+    }
+  }
+}

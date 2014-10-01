@@ -1,0 +1,4 @@
+{% comment %}<span class="label">{{ page.categories | join: ', ' }}{{ post.categories | join: ', ' }}</span>{% endcomment %}
+{% for category in post.categories %}
+<span class="label">{{ category }}</span>
+{% endfor %}

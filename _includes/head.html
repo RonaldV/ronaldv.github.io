@@ -1,0 +1,30 @@
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title == "Home" %} {{ site.title }} &middot; {{ site.subtitle }} {% else %} {{ page.title }}
+  &middot; {{ site.title }} {% endif %}</title>
+  <meta name="author" content="{{ site.author }}">
+
+  {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
+  <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+  {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' }}{% endif %}{% endcapture %}
+  <link rel="canonical" href="{{ canonical }}">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/screen.css" media="screen, projection" type="text/css">
+
+  <!-- Icons -->
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144-precomposed.png">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="{{site.title}}" href="/atom.xml">
+  
+  <!-- JS -->
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+  {% include google_analytics.html %}
+</head>

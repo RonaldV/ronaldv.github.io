@@ -1,0 +1,21 @@
+.archives {
+  h2 {
+    color: $color-link;
+    border-bottom: 1px solid $color-border;
+  }
+  h3 {
+    display: inline-block;
+  }
+  .meta {
+    display: inline-block;
+    margin-left: $normal-size;
+    vertical-align: middle;
+    *vertical-align: auto;
+  }
+  .date:before {
+    content: "\f017";
+    font-family: 'FontAwesome';
+    font-size: 100%;
+    margin-right: $smaller-size;
+  }
+}

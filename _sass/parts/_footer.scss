@@ -1,0 +1,4 @@
+body > footer {
+  margin: $normal-size 0 $normal-size $padding-from-header;
+  @include font-size($sub-normal-size);
+}
