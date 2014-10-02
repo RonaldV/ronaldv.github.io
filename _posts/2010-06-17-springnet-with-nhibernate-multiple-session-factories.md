@@ -8,6 +8,7 @@ categories: [Spring.NET, NHibernate, development]
 Why would you need multiple session factories, you ask? Well, you'll usually need it when you have mutiple users that are connecting to one or more databases with the same database schema. When you're using Spring.NET with NHibernate you have some classes available that simplyfy using NHibernate, but none of them support using multiple session factories. Unless you add it of course.
 
 At first thought there are two possible ways to do this.
+
 - You can extend Spring's HibernateTemplate and HibernateTransactionManager and override the SessionFactory property with one that is context sensitive.
 - You can extend the LocalSessionFactoryObject and override the NewSessionFactory method so that it returns a context sensitive SessionFactory.
 
