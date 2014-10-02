@@ -13,8 +13,8 @@ But this post is not an introduction into BDD as there are a lot of good resourc
 
 For example
 
-* [Introduction to BDD](http://dannorth.net/introducing-bdd) by the man who dreamed up BDD Mr. Dan North himself.
-* [BDD](http://www.code-magazine.com/article.aspx?quickid=0805061) by Scott Bellware a big promoter of BDD in .NET land.
+- [Introduction to BDD](http://dannorth.net/introducing-bdd) by the man who dreamed up BDD Mr. Dan North himself.
+- [BDD](http://www.code-magazine.com/article.aspx?quickid=0805061) by Scott Bellware a big promoter of BDD in .NET land.
 
 What I wanted to talk to you about are in my opinion a few misconceptions about the subject. I have seen people say “Wohow what is this? There are multiple ways to do BDD.”. And yes that is partially correct, because Dan North’s views on it have grown to encompass a much larger idea then just testing. A part of it contains analysis as wel and in such the tests have changed to reflect these new views. 
 
