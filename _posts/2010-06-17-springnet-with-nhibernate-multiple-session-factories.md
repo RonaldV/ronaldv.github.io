@@ -8,8 +8,8 @@ categories: [Spring.NET, NHibernate, development]
 Why would you need multiple session factories, you ask? Well, you'll usually need it when you have mutiple users that are connecting to one or more databases with the same database schema. When you're using Spring.NET with NHibernate you have some classes available that simplyfy using NHibernate, but none of them support using multiple session factories. Unless you add it of course.
 
 At first thought there are two possible ways to do this.
-* You can extend Spring's HibernateTemplate and HibernateTransactionManager and override the SessionFactory property with one that is context sensitive.
-* You can extend the LocalSessionFactoryObject and override the NewSessionFactory method so that it returns a context sensitive SessionFactory.
+- You can extend Spring's HibernateTemplate and HibernateTransactionManager and override the SessionFactory property with one that is context sensitive.
+- You can extend the LocalSessionFactoryObject and override the NewSessionFactory method so that it returns a context sensitive SessionFactory.
 
 Of the two the second one is the best option and is also mentioned in the [documentation](http://www.springframework.net/docs/1.3.0/reference/html/orm.html). Although spring has DbProviders available for context sensitive [user credentials](http://www.springframework.net/docs/1.3.0/reference/html/dbprovider.html#dbprovider-usercredentials) and [multiple DbProviders](http://www.springframework.net/docs/1.3.0/reference/html/dbprovider.html#dbprovider-multidelegating), it doesn't have a standard LocalSessionFactoryObject that creates context sensitive SessionFactories. If you're using NHibernate 2.1 you can just follow [this thread](http://forum.springframework.net/showthread.php?t=4462) using the updated code posted by tvering.
 
