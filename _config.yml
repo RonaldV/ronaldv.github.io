@@ -24,12 +24,13 @@ disqus_show_comment_count: true
 #
 # Jekyll Settings
 #
+gems:
+  - jekyll-paginate
+  
 permalink: pretty
 #markdown: redcarpet
 #highlighter: rouge
-redcarpet:
-  extensions: ["tables"]
 paginate: 6
 
 sass:
-  style: :compressed
+  style: compressed
